@@ -1,0 +1,467 @@
+body,
+html {
+  background-color: #fdf7f6;
+}
+p {
+  font-family: "Jost", sans-serif;
+  font-size: 200%;
+  position: relative;
+}
+img {
+  width: 4vw;
+}
+h1 {
+  text-align: center;
+  padding-top: 3%;
+  font-family: "Jost", sans-serif;
+}
+.parti {
+  border-radius: 10px;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 10px 40px -10px lightgrey;
+  position: relative;
+}
+.parti:hover > img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+    hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+.pariter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 5em;
+  grid-row-gap: 3em;
+  margin: 5% 13%;
+  cursor: pointer;
+}
+
+/* Parti grid */
+
+.partiRødt {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.sosialistiskVenstre {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.arbeiderpartiet {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.senterpartiet {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.miljøpartietDeGrønne {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.kristeligFolkeparti {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.venstre {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.høyre {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.fremskrittspartiet {
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+/* parti */
+:root {
+  --r: #e90302;
+
+  --ap: #d70926;
+
+  --sv: #eb4040;
+
+  --sp: #00843d;
+
+  --mdg: #597d22;
+
+  --krf: #fed877;
+
+  --v: #006666;
+
+  --h: #0065f1;
+
+  --frp: #004f80;
+}
+
+/* Rødt */
+
+.vis {
+  z-index: 10;
+  transform: translateX(-35px);
+  transition: transform 0.3s ease;
+}
+.parti:hover > .vis {
+  transform: translateX(5px);
+}
+
+.parti:hover > .gjemt {
+  margin: 0 0%;
+}
+.gjemt {
+  color: #fdf7f6;
+  transform: translateX(40px);
+  transition: transform 0.3s ease;
+  margin: 0 0%;
+}
+
+.parti:hover > .gjemt {
+  transform: translateX(-5px);
+}
+
+.partiRødt {
+  transition: background-color 0.2s ease;
+}
+.partiRødt:hover {
+  background-color: var(--r);
+}
+
+/* Sosialistisk venstre */
+
+.sosialistiskVenstre {
+  transition: background-color 0.2s ease;
+}
+.sosialistiskVenstre:hover {
+  background-color: var(--sv);
+}
+
+.gjemtSV {
+  color: #fdf7f6;
+  transform: translateX(55px);
+  transition: transform 0.3s ease;
+  margin: 0 0%;
+}
+.visSV {
+  z-index: 10;
+  transform: translateX(-115px);
+  transition: transform 0.3s ease;
+}
+.parti:hover > .visSV {
+  transform: translateX(0);
+}
+.parti:hover > .gjemtSV {
+  transform: translateX(0px);
+}
+
+/* Arbeiderpartiet */
+
+.arbeiderpartiet {
+  transition: background-color 0.2s ease;
+}
+.arbeiderpartiet:hover {
+  background-color: var(--ap);
+}
+
+.gjemtAP {
+  color: #fdf7f6;
+  transform: translateX(55px);
+  transition: transform 0.3s ease;
+  margin: 0 0%;
+}
+.visAP {
+  z-index: 10;
+  transform: translateX(-105px);
+  transition: transform 0.3s ease;
+}
+.parti:hover > .visAP {
+  transform: translateX(10px);
+}
+.parti:hover > .gjemtAP {
+  transform: translateX(-10px);
+}
+
+/* Senterpartiet */
+
+.senterpartiet {
+  transition: background-color 0.2s ease;
+}
+.senterpartiet:hover {
+  background-color: var(--sp);
+}
+
+.gjemtSP {
+  color: #fdf7f6;
+  transform: translateX(55px);
+  transition: transform 0.3s ease;
+  margin: 0 0%;
+}
+.visSP {
+  z-index: 10;
+  transform: translateX(-85px);
+  transition: transform 0.3s ease;
+}
+.parti:hover > .visSP {
+  transform: translateX(0px);
+}
+.parti:hover > .gjemtSP {
+  transform: translateX(0px);
+}
+
+/* MDG */
+
+.miljøpartietDeGrønne {
+  transition: background-color 0.2s ease;
+}
+.miljøpartietDeGrønne:hover {
+  background-color: var(--mdg);
+}
+
+.gjemtMDG {
+  color: #fdf7f6;
+  transform: translateX(55px);
+  transition: transform 0.3s ease;
+  margin: 0 0%;
+}
+.visMDG {
+  z-index: 10;
+  transform: translateX(-130px);
+  transition: transform 0.3s ease;
+}
+.parti:hover > .visMDG {
+  transform: translateX(-20px);
+}
+.parti:hover > .gjemtMDG {
+  transform: translateX(10px);
+}
+
+/* KRF */
+
+.kristeligFolkeparti {
+  transition: background-color 0.2s ease;
+}
+.kristeligFolkeparti:hover {
+  background-color: var(--krf);
+}
+
+.gjemtKRF {
+  color: #fdf7f6;
+  transform: translateX(55px);
+  transition: transform 0.3s ease;
+  margin: 0 0%;
+}
+.visKRF {
+  z-index: 10;
+  transform: translateX(-130px);
+  transition: transform 0.3s ease;
+}
+.parti:hover > .visKRF {
+  transform: translateX(0px);
+}
+.parti:hover > .gjemtKRF {
+  transform: translateX(-5px);
+}
+
+/* Venstre */
+
+.venstre {
+  transition: background-color 0.2s ease;
+}
+.venstre:hover {
+  background-color: var(--v);
+}
+
+.gjemtV {
+  color: #fdf7f6;
+  transform: translateX(55px);
+  transition: transform 0.3s ease;
+  margin: 0 0%;
+}
+.visV {
+  z-index: 10;
+  transform: translateX(-50px);
+  transition: transform 0.3s ease;
+}
+.parti:hover > .visV {
+  transform: translateX(5px);
+}
+.parti:hover > .gjemtV {
+  transform: translateX(-5px);
+}
+
+/* Høyre */
+
+.høyre {
+  transition: background-color 0.2s ease;
+}
+.høyre:hover {
+  background-color: var(--h);
+}
+
+.gjemtH {
+  color: #fdf7f6;
+  transform: translateX(55px);
+  transition: transform 0.3s ease;
+  margin: 0 0%;
+}
+.visH {
+  z-index: 10;
+  transform: translateX(-40px);
+  transition: transform 0.3s ease;
+}
+.parti:hover > .visH {
+  transform: translateX(5px);
+}
+.parti:hover > .gjemtH {
+  transform: translateX(-5px);
+}
+
+/* Frp */
+
+.fremskrittspartiet {
+  transition: background-color 0.2s ease;
+}
+.fremskrittspartiet:hover {
+  background-color: var(--frp);
+}
+
+.gjemtFRP {
+  color: #fdf7f6;
+  transform: translateX(55px);
+  transition: transform 0.3s ease;
+  margin: 0 0%;
+}
+.visFRP {
+  z-index: 10;
+  transform: translateX(-115px);
+  transition: transform 0.3s ease;
+}
+.parti:hover > .visFRP {
+  transform: translateX(5px);
+}
+.parti:hover > .gjemtFRP {
+  transform: translateX(-5px);
+}
+
+/* Confirm box */
+
+.voteModalContainer {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: rgb(0, 0, 0, 0.3);
+}
+.voteModal {
+  background-color: #fff;
+  padding: 2em 3em;
+  border-radius: 6px;
+  border: 1px solid #f4c5be;
+}
+.vilDuStemme {
+  font-size: 130%;
+  font-family: "Comfortaa", cursive;
+}
+
+button {
+  border-radius: 10px;
+  color: #fff;
+  border: transparent;
+  padding: 8px;
+
+  margin: 5px;
+  transition: ease 0.5s;
+}
+
+button:hover {
+  opacity: 85%;
+}
+
+/* Facebook */
+.avbryt {
+  border-radius: 10px;
+  color: lightslategray;
+  border: transparent;
+  padding: 8px;
+  background: transparent;
+  margin: 5px;
+  transition: ease 0.5s;
+  font-size: large;
+}
+.avbryt:hover {
+  opacity: 80%;
+  text-decoration: underline;
+}
+.numberModelContainer {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: rgb(0, 0, 0, 0.3);
+}
+.numberModal {
+  background-color: #fff;
+  padding: 2em 3em;
+  border-radius: 6px;
+  border: 1px solid #f4c5be;
+}
+#bekreft {
+  border-radius: 10px;
+  color: #fff;
+  border: transparent;
+  padding: 8px;
+  background: rgb(44, 99, 245);
+  margin: 5px;
+  transition: ease 0.5s;
+  font-size: large;
+}
+.tlf {
+  padding: 3px;
+  margin: 2px;
+  border-color: transparent transparent black transparent;
+  transition: text-align 1s ease;
+}
+#Facebook {
+  margin: 5px;
+}
+
+.tlf:focus {
+  outline: none;
+}
+.tlf:focus .numberModel {
+  width: 1040px;
+  height: 1040px;
+}
+
+/* Loader */
+
+.loadingContainer {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: rgb(0, 0, 0, 0.3);
+}
+.loading {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "valg-side",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.4.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jquery": "^3.7.1",
+    "mssql": "^10.0.1",
+    "passport": "^0.6.0",
+    "passport-facebook": "^3.0.0",
+    "tsqlstring": "^1.0.1"
+  }
+}

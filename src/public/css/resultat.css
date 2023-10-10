@@ -1,0 +1,14 @@
+.resultattavle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5vh auto;
+  font-family: "Jost", sans-serif;
+}
+
+.tavleContainer {
+  width: 60vw;
+  margin: 5vh auto;
+  box-shadow: 2px 5px 5px 1px lightgray;
+}
