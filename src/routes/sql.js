@@ -20,7 +20,7 @@ const sqlConfig = {
 async function oppdaterParti(id){
     try {
     await sql.connect(sqlConfig);
-    const string = SqlString.format("update parti set stemmer = stemmer + 1 where bid = ?", [id])
+        const string = SqlString.format('update parti set stemmer = stemmer + 1 where id = ?', [id]);
     const res = await sql.query(string);
     return res
   } catch (error) {
@@ -84,7 +84,7 @@ async function leggTilBruker(id) {
   let pool;
   try {
     pool = await sql.connect(sqlConfig);
-    const string5 = SqlString.format('INSERT INTO bruker (bid, stemt) VALUES (?, 1)', [id]); // Angi stemt = 1
+    const string5 = SqlString.format(`INSERT INTO brukere VALUES(${id}, 0)`);
     await pool.request().query(string5);
     console.log(id + " lagt til")
   } catch (error) {
