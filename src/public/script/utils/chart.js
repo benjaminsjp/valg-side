@@ -38,3 +38,9 @@ function lagChart(data) {
     }
   );
   }
+
+  //tilbake knapp
+
+  $(".tilbake").on("click", function(){
+    window.location.replace("/")
+  })

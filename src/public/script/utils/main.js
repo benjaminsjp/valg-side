@@ -22,3 +22,7 @@ $(".avbryt").on("click", function(){
  // HTML-element for "Logg ut" -knappen
 const logoutButton = document.getElementById('logout-button');
 
+$(".seRes").on("click", function(){
+    window.location.replace('/resultat')
+})
+

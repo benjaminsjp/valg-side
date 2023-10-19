@@ -1,5 +1,6 @@
 const sql = require('mssql');
 require('dotenv').config();
+const SqlString = require('tsqlstring');
 
 const sqlConfig = {
   user: process.env.DB_USER,
@@ -78,7 +79,7 @@ async function leggTilBruker(id) {
   let pool;
   try {
     pool = await sql.connect(sqlConfig);
-    await pool.request().query(`INSERT INTO brukere VALUES(${id}, 0)`);
+    await pool.request().query(`INSERT INTO brukere VALUES(${id}, 1)`);
   } catch (error) {
     console.error(error);
     throw error; // Re-throw the error to be handled by the route handler

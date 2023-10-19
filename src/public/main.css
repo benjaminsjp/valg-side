@@ -24,6 +24,7 @@ h1 {
   box-shadow: 0px 10px 40px -10px lightgrey;
   position: relative;
 }
+
 .parti:hover > img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
     hue-rotate(93deg) brightness(103%) contrast(103%);
@@ -32,9 +33,9 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 5em;
-  grid-row-gap: 3em;
-  margin: 5% 13%;
+  grid-column-gap: 4vw;
+  grid-row-gap: 10vh;
+  margin: 3% 13% 3% 13%;
   cursor: pointer;
 }
 
@@ -98,7 +99,7 @@ h1 {
   position: absolute;
 }
 .parti:hover > .vis {
-  transform: translateX(2vw);
+  transform: translateX(30px);
 }
 
 .parti:hover > .gjemt {
@@ -113,7 +114,7 @@ h1 {
 }
 
 .parti:hover > .gjemt {
-  transform: translateX(-2vw);
+  transform: translateX(-30px);
 }
 
 .partiRødt {
@@ -146,10 +147,10 @@ h1 {
   position: absolute;
 }
 .parti:hover > .visSV {
-  transform: translateX(8.5vw);
+  transform: translateX(130px);
 }
 .parti:hover > .gjemtSV {
-  transform: translateX(-2vw);
+  transform: translateX(-30px);
 }
 
 /* Arbeiderpartiet */
@@ -175,10 +176,10 @@ h1 {
   position: absolute;
 }
 .parti:hover > .visAP {
-  transform: translateX(6.5vw);
+  transform: translateX(105px);
 }
 .parti:hover > .gjemtAP {
-  transform: translateX(-2.5vw);
+  transform: translateX(-35px);
 }
 
 /* Senterpartiet */
@@ -204,10 +205,10 @@ h1 {
   position: absolute;
 }
 .parti:hover > .visSP {
-  transform: translateX(5.5vw);
+  transform: translateX(85px);
 }
 .parti:hover > .gjemtSP {
-  transform: translateX(-2.5vw);
+  transform: translateX(-33px);
 }
 
 /* MDG */
@@ -235,10 +236,10 @@ h1 {
   position: absolute;
 }
 .parti:hover > .visMDG {
-  transform: translateX(6vw);
+  transform: translateX(100px);
 }
 .parti:hover > .gjemtMDG {
-  transform: translateX(-3vw);
+  transform: translateX(-40px);
 }
 
 /* KRF */
@@ -264,10 +265,10 @@ h1 {
   position: absolute;
 }
 .parti:hover > .visKRF {
-  transform: translateX(8.2vw);
+  transform: translateX(125px);
 }
 .parti:hover > .gjemtKRF {
-  transform: translateX(-2.2vw);
+  transform: translateX(-35px);
 }
 
 /* Venstre */
@@ -293,10 +294,10 @@ h1 {
   position: absolute;
 }
 .parti:hover > .visV {
-  transform: translateX(3.3vw);
+  transform: translateX(50px);
 }
 .parti:hover > .gjemtV {
-  transform: translateX(-2.3vw);
+  transform: translateX(-40px);
 }
 
 /* Høyre */
@@ -322,10 +323,10 @@ h1 {
   position: absolute;
 }
 .parti:hover > .visH {
-  transform: translateX(3.3vw);
+  transform: translateX(45px);
 }
 .parti:hover > .gjemtH {
-  transform: translateX(-2.3vw);
+  transform: translateX(-35px);
 }
 
 /* Frp */
@@ -351,10 +352,10 @@ h1 {
   position: absolute;
 }
 .parti:hover > .visFRP {
-  transform: translateX(7.5vw);
+  transform: translateX(120px);
 }
 .parti:hover > .gjemtFRP {
-  transform: translateX(-2.3vw);
+  transform: translateX(-35px);
 }
 
 /* Confirm box */
@@ -483,5 +484,36 @@ button:hover {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.seResContainer {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.seRes {
+  border-radius: 10px;
+  color: black;
+  border: transparent;
+  padding: 8px;
+  background: white;
+  margin: 5px;
+  transition: ease 0.3s;
+  font-size: large;
+  box-shadow: 1px 2px 10px 1px lightgrey;
+}
+.seRes:hover {
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (max-width: 1400px) {
+  .parti > p {
+    display: none;
+  }
+  .parti:hover > .bilde {
+    transform: translateX(0);
   }
 }
